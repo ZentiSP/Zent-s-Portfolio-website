@@ -17,15 +17,24 @@ document.addEventListener('DOMContentLoaded', function () {
         zentBgDiv.classList.remove('fade-in');
     });
     
-    const projectcon = document.querySelector('.project-list');
-    const header1 = document.querySelector('.header1');
+    const projectcon = document.querySelector('.box');
+    const header1 = document.querySelector('.h1-2');
     
     projectcon.addEventListener('mouseenter' , function () {
-        header1.classList.add('pj-color-on')
+        header1.classList.add('blue-t-gd-anim')
     });
 
     projectcon.addEventListener('mouseleave' , function () {
 
-        header1.classList.remove('pj-color-on')
+        header1.classList.remove('blue-t-gd-anim')
+    });
+
+    header1.addEventListener('mouseenter' , function () {
+        header1.classList.add('blue-t-gd-anim')
+    });
+
+    header1.addEventListener('mouseleave' , function () {
+
+        header1.classList.remove('blue-t-gd-anim')
     });
 });

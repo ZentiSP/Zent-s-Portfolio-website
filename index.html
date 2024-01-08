@@ -18,40 +18,34 @@
     <nav>
         <div class="nav-left"><span class="material-symbols-outlined">menu</span></div>
     </nav>
-    <section class="header-zent gridCenter">
-        <div class="zent-container gridCenter">
-            <div class="zent-bg flexVcenter flexHcenter"></div>
-            <div class="zent center">ZENTINAL</div>
-        </div>
-        <div class="zent-info">
-            <h1>Welcome to My Portfolio!</h1>
-            <p>Explore my work, skills, and passion for creating meaningful projects.</p>
-        </div>
-        <!--<div class="flexVcenter flexHcenter"><p class="zent ">ZENTINAL</p></div>-->
-    </section>
-
-    <section class="project">
-        <div class="project-content content">
-            <div class="header">PROJECTS</div>
-            <div class="project-list table-container">
-                 <ul class="spacegap flex fixedSpaces flexVcenter flexHcenter">
-                    <li>
-                        <div class="b-bg projectbox">
-                            <div class="background-holder">
-                                <div class="pj-bg1 background"></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="b-bg projectbox"></div>
-                    </li>
-                    <li>
-                         <div class="b-bg projectbox"></div>
-                    </li>
-                </ul>
+    <div class="min-w-full">
+        <section class="header-zent grid gridCenter relative">
+            <div class="zent-container flex flexHcenter flexVcenter">
+                <div class="zent-bg flexVcenter flexHcenter"></div>
+                <div class="zent center absolute">ZENTINAL</div>
             </div>
-        
-    </section>
+            <div class="zent-info relative">
+                <h1>Welcome to <span class="blue-t-gd">My Portfolio!</span></h1>
+                <p>Explore my work, skills, and passion for creating meaningful projects.</p>
+            </div>
+            <!--<div class="flexVcenter flexHcenter"><p class="zent ">ZENTINAL</p></div>-->
+        </section>
+
+        <section class="project grid gridCenter relative">
+            <div class="wh-auto"><h1 class="h1-2">PROJECTS</h1></div>
+            <div class="box flex">
+                <div class="pj1 b-bg round-8v">
+
+                </div>
+                <div class="pj2 b-bg round-8v"></div>
+                <div class="pj3 b-bg round-8v"></div>
+            </div>
+        </section>
+        <section class="header-zent grid gridCenter relative"></section>
+        <footer class="container">
+
+        </footer>
+    </div>
 </body>
 
 </html>
