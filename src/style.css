@@ -1,0 +1,134 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+:root {
+  --white: #f5f5f5;
+  --black-lux: #272727;
+  --black-drak: #0c0c0c;
+}
+
+body {
+  font-family: "Roboto", "Arial Narrow Bold", sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+  margin: 0;
+  padding: 0;
+}
+
+.flexVcenter {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.flexHcenter {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.nav-left {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 1vh 1vh;
+  width: auto;
+  height: auto;
+}
+
+.material-symbols-outlined {
+  cursor: pointer;
+}
+
+.zent {
+  position: absolute;
+  font-size: calc(2rem + 12vw);
+  font-family: Impact, "Arial Narrow Bold", sans-serif;
+  color: var(--white);
+
+  background-image: url(/src/img/Zen-finish.png);
+  background-clip: text;
+  background-size: calc(150vw + 1vh);
+  background-repeat: no-repeat;
+  background-position-x: 30%;
+  background-position-y: 5%;
+
+  margin: 0;
+  padding: 0;
+
+  transition-duration: 1.5s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.zent:hover {
+  font-size: calc(2rem + 14vw);
+  -webkit-text-stroke: 2px var(--white);
+  cursor: pointer;
+
+  text-shadow: 2px 2px 4px rgba(55, 55, 55, 0.1);
+  color: transparent;
+  background-image: url(/src/img/Zen-finish.png);
+  background-clip: text;
+  background-size: calc(150vw + 1vh);
+  background-repeat: no-repeat;
+  background-position-x: 69%;
+  background-position-y: 0%;
+
+  transition-duration: 1.25s;
+  transition-timing-function: ease-in-out;
+}
+
+.zent-bg {
+  display: flex;
+  height: 40vh;
+  min-width: 450px;
+  width: 80vw;
+  min-width: 200px;
+  background-image: url(/src/img/Zen-finishsky.png);
+  background-size: calc(150vw + 1vh);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 3vw;
+  border: 2px solid var(--white);
+  opacity: 0;
+}
+
+/* Zentbg animation */
+
+.zent-bg {
+  opacity: 0;
+  transform: translateY(10%); /* Initial position outside the viewport */
+  transition: opacity 0.5s ease-in-out, transform 1s ease-in-out; /* Add transition property for smooth animation */
+  transition-delay: 0.1s;
+}
+
+.zent-bg.fade-in {
+  opacity: 0.5;
+  transform: translateY(0); /* Slide in from the right */
+  transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
+  transition-delay: 0.3s;
+}
+
+section {
+  display: grid;
+  min-height: 400px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.header-zent {
+  min-height: 200px;
+  place-items: center;
+  align-content: center;
+  margin: 0;
+  padding: 0;
+
+  background: radial-gradient(#26283d, #0c0c0c 90%);
+}
+
+.project {
+  text-align: center;
+  background-color: #303030;
+  font-size: calc(2vw + 2vh);
+  font-weight: 900;
+}
