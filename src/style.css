@@ -5,6 +5,14 @@
   --white: #f5f5f5;
   --black-lux: #272727;
   --black-drak: #0c0c0c;
+  --orange-light: #f0a835;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 body {
@@ -13,6 +21,37 @@ body {
   color: var(--white);
   margin: 0;
   padding: 0;
+
+}
+
+h1, a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  border: 0;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+li, ol, ul {
+  list-style: none;
+}
+
+.table-container{
+  display: table;
+  table-layout: fixed;
+  position: relative;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.flex .fixedSpaces {
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
 .flexVcenter {
@@ -25,6 +64,31 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.center {
+  align-content: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+}
+
+.grid {
+  display: grid;
+}
+.gridCenter {
+  place-items: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.relative {
+  position: relative!important;
+}
+
+.round-12 {
+  border-radius: 12px;
 }
 
 .nav-left {
@@ -40,9 +104,28 @@ body {
   cursor: pointer;
 }
 
+.zent-container {
+  position: relative;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.zent-info {
+  position: relative;
+  margin: 20px 0;
+  text-align: center;
+}
+
 .zent {
   position: absolute;
-  font-size: calc(2rem + 12vw);
+  place-items: center;
+  align-content: center;
+
+  font-size: 200px;
   font-family: Impact, "Arial Narrow Bold", sans-serif;
   color: var(--white);
 
@@ -60,7 +143,7 @@ body {
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .zent:hover {
-  font-size: calc(2rem + 14vw);
+  font-size: 250px;
   -webkit-text-stroke: 2px var(--white);
   cursor: pointer;
 
@@ -68,67 +151,133 @@ body {
   color: transparent;
   background-image: url(/src/img/Zen-finish.png);
   background-clip: text;
-  background-size: calc(150vw + 1vh);
+  background-size: 2000px;
   background-repeat: no-repeat;
   background-position-x: 69%;
-  background-position-y: 0%;
+  background-position-y: -3%;
 
   transition-duration: 1.25s;
   transition-timing-function: ease-in-out;
 }
 
+@media screen and (max-width: 745px) {
+  .zent {
+    font-size: 150px;
+  }
+  .zent:hover {
+    font-size: 180px;
+  }
+}
 .zent-bg {
   display: flex;
   height: 40vh;
-  min-width: 450px;
+  min-height: 250px;
   width: 80vw;
-  min-width: 200px;
+  min-width: 740px;
   background-image: url(/src/img/Zen-finishsky.png);
-  background-size: calc(150vw + 1vh);
+  background-size: calc(1vw + 1vh);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 3vw;
   border: 2px solid var(--white);
-  opacity: 0;
 }
 
 /* Zentbg animation */
 
 .zent-bg {
-  opacity: 0;
-  transform: translateY(10%); /* Initial position outside the viewport */
+  opacity: 0  ;
   transition: opacity 0.5s ease-in-out, transform 1s ease-in-out; /* Add transition property for smooth animation */
   transition-delay: 0.1s;
 }
 
 .zent-bg.fade-in {
   opacity: 0.5;
-  transform: translateY(0); /* Slide in from the right */
-  transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
+
+  transition: opacity 0.9s ease-in-out,;
   transition-delay: 0.3s;
+}
+
+.light {
+  position: absolute;
+  z-index: -1;
 }
 
 section {
   display: grid;
-  min-height: 400px;
-  height: 100vh;
+  height: 100vh ;
+  width: 100vw;
+  min-width: 100vw;
+  min-height: 430px;
   margin: 0;
   padding: 0;
+  background: #0c0c0c;
 }
 
 .header-zent {
-  min-height: 200px;
   place-items: center;
   align-content: center;
-  margin: 0;
-  padding: 0;
-
-  background: radial-gradient(#26283d, #0c0c0c 90%);
+  background: rgb(38,40,61);
+  background: radial-gradient(circle, rgba(38,40,61,1) 2%, rgba(12,12,12,1) 43%);
 }
 
-.project {
+.project .header {
+  position: relative;
+  margin: 0;
+  top: 90px;
   text-align: center;
-  background-color: #303030;
-  font-size: calc(2vw + 2vh);
-  font-weight: 900;
+  background-color: var();
+  font-size: 80px;
+  font-weight: 700;
+  color: var(--white)
+}
+
+.pj-color-on {
+  color: var(--orange-light);
+}
+
+.b-bg {
+  background-color: var(--black-lux);
+}
+
+.project-list {
+  position: relative;
+  top: 180px;
+  width: 100%!important;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  float: none;
+}
+
+.projectbox {
+  width: 380px;
+  height: 380px;
+  overflow-clip-margin: auto;
+
+  border-radius: 25px;
+}
+
+.background-holder {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.background {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pj-bg1 {
+  background-image: url(/src/img/Zen-finishsky.png);
+  background-size: cover;
+  background-position: center;
+  background-clip: content-box;
+}
+
+.spacegap {
+  justify-content: space-evenly;
+  gap: 50px;
 }
