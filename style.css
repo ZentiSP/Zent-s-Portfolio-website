@@ -27,10 +27,7 @@
 }
 
 html {
-  margin: auto;
-  padding: auto;
   scroll-behavior: smooth;
-
   font-size: 16px;
 }
 body::-webkit-scrollbar {
@@ -45,8 +42,8 @@ body {
   background-attachment: fixed;
 
   min-height: 100vh;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: 0 auto;
 }
 
 *, :before, :after {
@@ -224,8 +221,6 @@ place-content-center {
 
   text-shadow: 2px 2px 4px rgba(55, 55, 55, 0.1);
   color: transparent;
-  background-clip: text;
-  background-repeat: no-repeat;
   background-position-x: 69%;
   background-position-y: -6%;
 
@@ -233,22 +228,43 @@ place-content-center {
   transition-timing-function: ease-in-out;
 }
 
-@media screen and (max-width: 745px) {
+@media screen and (max-width: 950px) {
   .zent {
-    font-size: 130px;
+    font-size: 9.5rem;
+    background-size: 1500px;
   }
   .zent:hover {
-    font-size: 150px;
+    font-size: 10.5rem;
     background-size: 1500px;
+  }
+  .zent-bg {
+    height: 12em;
   }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 480px) {
   .zent {
-    font-size: 130px;
+    font-size: 4.5rem;
+    background-size: 1200px;
+    background-position-y: 0%;
   }
   .zent:hover {
-    font-size: 150px;
+    font-size: 5.5rem;
+  }
+  .zent-info {
+    font-size: 0.75rem;
+  }
+  .zent-bg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .zent {
+    font-size: 2.5rem;
+  }
+  .zent:hover {
+    font-size: 3.5rem;
     background-size: 1300px;
   }
 }
@@ -256,26 +272,26 @@ place-content-center {
 .zent-bg {
   display: flex;
   height: 14em;
-  width: 1250px;
+  width: 0px;
   background-image: url(/src/img/Zen-finishsky.png);
   background-size: calc(1vw + 1vh);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 3vw;
   border: 2px solid var(--white);
+  z-index: -1;
 
   opacity: 0  ;
-  transition: opacity 0.5s ease-in-out, transform 1s ease-in-out,height 0.9s ease-in-out; /* Add transition property for smooth animation */
-  transition-delay: 0.1s;
+  transition: width 0.5s ease-in-out,opacity 0.5s ease-in-out 0.3s, transform 1s ease-in-out 0.3s,height 0.9s ease-in-out 0.3s; /* Add transition property for smooth animation */
 }
 
 /* Zentbg animation */
 
 .zent-bg.fade-in.full-height{
   opacity: 0.3;
-  transition: opacity 0.9s ease-in-out, height 0.9s ease-in-out;
-  transition-delay: 0.3s;
   height: 20em;
+  width: 80dvw;
+  transition: width 1s ease-in-out,height 0.9s ease-in-out 0.3s;
 }
 
 .header-zent {
@@ -296,6 +312,11 @@ place-content-center {
   font-size: 80px;
   font-weight: 700;
   color: var(--white)
+}
+
+.boxwrap {
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .FlexContainer {
