@@ -9,12 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
     zentDiv.addEventListener('mouseenter', function () {
         // Change the background on hover
         zentBgDiv.classList.add('fade-in');
+        zentBgDiv.classList.add('full-height');
     });
 
     // Add event listener for mouseleave
     zentDiv.addEventListener('mouseleave', function () {
         //Reset the background on mouse leave
         zentBgDiv.classList.remove('fade-in');
+        zentBgDiv.classList.remove('full-height');
     });
     
     const projectcon = document.querySelector('.box');
