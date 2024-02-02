@@ -18,6 +18,10 @@
   background-color: var(--white-lux);
 }
 
+.black {
+  background-color: var(--black-lux);
+}
+
 .blue-t-gd {
   background: #4984EB;
   background: linear-gradient(to right, var(--blue-reg) 19%, var(--blue-light) 70%);
@@ -39,7 +43,7 @@ body::-webkit-scrollbar {
 
 body {
   font-family: "Roboto", "Arial Narrow Bold", sans-serif;
-  color: var(--black-lux);
+  color: var(--white-lux);
   background: rgb(38,40,61);
   background: radial-gradient(circle, var(--black-drak) ,var(--black-lightdrak) 100%);
   background-attachment: fixed;
@@ -203,7 +207,7 @@ place-content-center {
   font-size: 14rem;
   font-weight: normal;
   font-family: Impact, "Arial Narrow Bold", sans-serif;
-  color: var(--black-lux);
+  color: var(--white-lux);
 
   background-image: url(./src/img/Zen-finish.png);
   background-clip: text;
@@ -277,7 +281,7 @@ place-content-center {
   height: 14em;
   width: 0px;
   border-radius: 3vw;
-  border: 2px solid var(--black-lux);
+  border: 2px solid var(--white-lux);
   z-index: -1;
 
   opacity: 0  ;
