@@ -183,6 +183,7 @@ place-content-center {
   width: 100%
 }
 
+
 .zent-info {
   margin: 20px 0;
   text-align: center;
@@ -201,7 +202,7 @@ place-content-center {
   font-family: Impact, "Arial Narrow Bold", sans-serif;
   color: var(--white);
 
-  background-image: url(/src/img/Zen-finish.png);
+  background-image: url(./src/img/Zen-finish.png);
   background-clip: text;
   background-size: 2000px;
   background-repeat: no-repeat;
@@ -273,7 +274,7 @@ place-content-center {
   display: flex;
   height: 14em;
   width: 0px;
-  background-image: url(/src/img/Zen-finishsky.png);
+  background-image: url(./src/img/Zen-finishsky.png);
   background-size: calc(1vw + 1vh);
   background-repeat: no-repeat;
   background-size: cover;
